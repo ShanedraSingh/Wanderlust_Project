@@ -1,0 +1,195 @@
+
+
+
+
+<%- layout("/layouts/boilerplate.ejs") %>
+
+<div class="row mt-3">
+    <div class="col-8 offset-2">
+<br><br>
+<h3>Create a New Listing</h3>
+
+<form method="POST" action="/listings" novalidate class="needs-validation" enctype="multipart/form-data">
+
+ <div class="mb-3">
+
+     <label for="title" class="form-label">Title</label>
+     <input name="listing[title]"
+      placeholder="Add a catchy title"
+      type="text"
+      class="form-control"
+      required>
+
+      <div class="valid-feedback">Title looks good!</div>
+      
+</div>
+
+
+ <div class="mb-3">
+    <label for="description" class="form-label">Description</label>
+    <textarea name="listing[description]" class="form-control" required></textarea>
+<div class="invalid-feedback">Please enter short description</div> 
+</div>
+<div class="m-b3">
+    <label for="category" class="form-label">Choose Category</label>
+    <div class="category-choose">
+        <p><b>Single choose :</b> Click &nbsp;&nbsp;</p>
+        <p><b>Multiple choose :</b> Ctrl + Click</p>
+    </div>
+    <select id="category" name="listing[category]" class="form-select border border-black border-opacity-50 mb-2"  multiple required style="font-size: .95rem;">
+        <option value="Beachfront">Beachfront</option>
+        <option value="Cabins">Cabins</option>
+        <option value="Omg">OMG</option>
+        <option value="Lake">Lake</option>
+        <option value="Design">Design</option>
+        <option value="Amazing Pools">Amazing pools</option>
+        <option value="Farms">Farms</option>
+        <option value="Amazing Views">Amazing views</option>
+        <option value="Rooms">Rooms</option>
+        <option value="Lakefront">Lakefront</option>
+        <option value="Tiny Homes">Tiny homes</option>
+        <option value="Countryside">Countryside</option>
+        <option value="Treehouse">Treehouse</option>
+        <option value="Trending">Trending</option>
+        <option value="Tropical">Tropical</option>
+        <option value="National Parks">National parks</option>
+        <option value="Casties">Casties</option>
+        <option value="Camping">Camping</option>
+        <option value="Top Of The World">Top of the world</option>
+        <option value="Luxe">Luxe</option>
+        <option value="Iconic Cities">Iconic cities</option>
+        <option value="Earth Homes">Earth homes</option>
+    </select>
+    <div class="invalid-feedback">Choose category name</div>
+</div>
+
+    
+    
+ <!-- <div class="mb-3">
+    <label for="image" class="form-label">Image Link</label>
+    <input name="listing[image]" placeholder="enter title URL/Link" type="text" class="form-control"> 
+ </div> -->
+
+ <div class="mb-3">
+    <label for="image" class="form-label">Upload Listing Image</label>
+    <input name="listing[image]" type="file" class="form-control"> 
+    required
+ </div>
+<!-- 
+
+ <div class="m-b3">
+    <label for="category" class="form-label">Choose Category</label>
+    <div class="category-choose">
+        <p><b>Single choose :</b> Click &nbsp;&nbsp;</p>
+        <p><b>Multiple choose :</b> Ctrl + Click</p>
+    </div>
+    <select id="category" name="listing[category]" class="form-select border border-black border-opacity-50 mb-2"  multiple required style="font-size: .95rem;">
+        <option value="Beachfront">Beachfront</option>
+        <option value="Cabins">Cabins</option>
+        <option value="Omg">OMG</option>
+        <option value="Lake">Lake</option>
+        <option value="Design">Design</option>
+        <option value="Amazing Pools">Amazing pools</option>
+        <option value="Farms">Farms</option>
+        <option value="Amazing Views">Amazing views</option>
+        <option value="Rooms">Rooms</option>
+        <option value="Lakefront">Lakefront</option>
+        <option value="Tiny Homes">Tiny homes</option>
+        <option value="Countryside">Countryside</option>
+        <option value="Treehouse">Treehouse</option>
+        <option value="Trending">Trending</option>
+        <option value="Tropical">Tropical</option>
+        <option value="National Parks">National parks</option>
+        <option value="Casties">Casties</option>
+        <option value="Camping">Camping</option>
+        <option value="Top Of The World">Top of the world</option>
+        <option value="Luxe">Luxe</option>
+        <option value="Iconic Cities">Iconic cities</option>
+        <option value="Earth Homes">Earth homes</option>
+    </select>
+    <div class="invalid-feedback">Choose category name</div>
+</div> -->
+
+
+ <div class="row">
+    <div class="mb-3 col-md-4">
+        <label for="price" class="form-label">Price</label>
+        <input name="listing[price]" placeholder="999" type="" class="form-control" required>
+        <!-- <div class="invalid-feedback">Price should be valid</div> -->
+
+    </div>
+     
+     <div class="mb-3 col-md-8">
+        <label for="country" class="form-label">Country</label>
+        <input name="listing[country]" placeholder="India" type="text" class="form-control" required>
+        <div class="invalid-feedback">Country name should be valid</div>
+    </div>
+ </div>
+ 
+
+<div class="mb-3">
+    <label for="location" class="form-label">Location</label>
+    <input name="listing[location]" placeholder="Uttar pradesh" type="text" class="form-control" required>
+    <div class="invalid-feedback">Location should be valid</div>
+</div>
+
+<button class="btn btn-dark add-btn mt-3">Add</button>
+
+
+</form>
+</div>
+</div>
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>wanderLust</title>
+</head>
+<body>
+    <h3>Create a New Listing</h3>
+    <form method="POST" action="/listings">
+
+         <div>
+        <label for="title" class="form-label">Title</label>
+         <input name="listing[title]" placeholder="enter title" type="text" class="form-control">
+        </div> 
+
+        
+        <div>
+            <label for="description" class="form-description">Description</label>
+            <textarea name="listing[description]"  class="form-control"></textarea>
+    
+        </div>
+            
+        <div>
+            <label for="image" class="form-label" class="form-label">Image Link</label>
+            <input name="listing[image]" placeholder="enter image URL/Link" type="text" class="form-control">
+        </div>
+
+        <div>
+            <label for="price" class="form-label">Price</label>
+            <input name="listing[price]" placeholder="enter price" type="number" class="form-control">
+        </div>
+    
+        <div>
+            <label for="country" class="form-label">Country</label>
+            <input name="listing[country]" placeholder="enter country" type="text" class="form-control">
+            
+        </div>
+
+       <div>
+        <label for="location" class="form-label">Location</label>
+        <input name="listing[location]" placeholder="enter location" type="text" class="form-control">
+       </div>
+
+       <br><br>
+
+       <button class="btn btn-dark">Add</button>
+
+
+
+    </form>
+</body>
+</html> -->

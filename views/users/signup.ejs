@@ -1,0 +1,118 @@
+<!-- <%- layout("/layouts/boilerplate.ejs") %>
+
+<div class="row mt-3">
+    <div class="col-6 offset-3">
+        <h1 class="col-10 offset-0">SignUp on WanderLust</h1>
+        <form action="/signup" method="POST" class="needs-validation" novalidate>
+            <div class="mb-3">
+
+                <label for="username" class="form-label">Username</label>
+                <input name="username"
+                id="username"
+                 type="text"
+                 class="form-control"
+                 required>
+           
+                 <div class="valid-feedback">Looks good!</div>
+                 
+           </div>
+
+<div class="mb-3">
+
+    <label for="email" class="form-label">Email</label>
+    <input name="email"
+    id="email"
+     type="text"
+     class="form-control"
+     required>
+     
+</div>
+
+<div class="mb-3">
+
+    <label for="password" class="form-label">Password</label>
+    <input name="password"
+    id="password"
+     type="text"
+     class="form-control"
+     required>
+     
+</div>
+
+<button class="btn btn-success">SignUp</button>
+
+
+        </form>
+    </div>
+ </div> -->
+ <% layout("/layouts/boilerplate") %>
+<link rel="stylesheet" href="/css/button-style.css">
+<link rel="stylesheet" href="/css/auth-account.css">
+<body>
+    <!-- <div class="row mt-3 mx-auto">
+        <div class="col-md-8 mx-auto"> -->
+    <div id="account-set-main">
+        <div id="account-set">
+
+            <h2>SignUp on Wanderlust</h2>
+            <h4 class="mt-2 mb-3">Have an account? <a href="/login">Log In</a></h4>
+            <div id="auth-account">
+                <a href="/auth/google">
+                    <img src="/Icon/google.png" alt="">
+                    <div>Continue with Google&nbsp;&nbsp;&nbsp;</div>
+                </a>
+                <a href="/auth/facebook">
+                    <img src="/Icon/facebook_auth.png" alt="">
+                    <div>Continue with Facebook</div>
+                </a>
+                <p class="mt-2">&boxh;&boxh;&boxh;&boxh;&boxh;&boxh;&nbsp;<b>Or</b>&nbsp;&boxh;&boxh;&boxh;&boxh;&boxh;&boxh;&nbsp;</p>
+            </div>
+            <form action="/signup" method="post" class="needs-validation" novalidate>
+
+                <div class="mb-3">
+                    <label for="fName" class="form-label">First Name</label>
+                    <input id="fName" type="text" placeholder="Enter First Name" name="fName" class="form-control border border-black border-opacity-50" required>
+                    <div class="valid-feedback">Looks good!</div>
+                    <div class="invalid-feedback">First Name should be valid</div>
+                </div>
+                <div class="mb-3">
+                    <label for="lName" class="form-label">Last Name</label>
+                    <input id="lName" type="text" placeholder="Enter Last Name" name="lName" class="form-control border border-black border-opacity-50" required>
+                    <div class="valid-feedback">Looks good!</div>
+                    <div class="invalid-feedback">Last Name should be valid</div>
+                </div>
+
+                <div class="mb-3">
+                    <label for="username" class="form-label">Username</label>
+                    <div class="input-group">
+                        <div class="input-group-prepend">
+                          <span class="input-group-text" id="basic-addon1">@</span>
+                        </div>
+                        <input id="username" type="text" placeholder="Enter Username" name="username" class="form-control border border-black border-opacity-50" required>
+                    </div>
+                    <div class="valid-feedback">Looks good!</div>
+                    <div class="invalid-feedback">Username should be valid</div>
+                </div>
+                <div class="mb-3">
+                    <label for="email" class="form-label">Email</label>
+                    <input id="email" type="email" placeholder="Enter Email" name="email" class="form-control border border-black border-opacity-50" required>
+                    <div class="valid-feedback">Looks good!</div>
+                    <div class="invalid-feedback">Email should be valid</div>
+                </div>
+                <div class="mb-3">
+                    <label for="password" class="form-label">Password</label>
+                    <input id="password" type="password" placeholder="Enter Password" name="password" class="form-control border border-black border-opacity-50" minlength="8" required>
+                    <div class="valid-feedback">Looks good!</div>
+                    <div class="invalid-feedback">Please lengthen this text to 8 charaters or more.</div>
+                </div>
+                <div class="form-check mb-2 mr-sm-2">
+                    <input class="form-check-input mt-2" style="opacity: 1;" type="checkbox" id="inlineFormCheck" required>
+                    <label class="form-check-label ms-3 mt-1" for="inlineFormCheck">
+                      Remember me
+                    </label>
+                </div>
+                <button class="btn btn-primary styleBtn">SignUp</button>
+            </form>
+        </div>
+    </div>
+</body>
